@@ -1,15 +1,14 @@
-LB="$HOME/.local/bin"
-NVIM_PATH="$LB/nvim"
+LOCAL_BIN="$HOME/.local/bin"
+DOCKER_BIN="$HOME/.docker/bin"
+GO_BIN="$HOME/go/bin"
 PROMPT="%F{250}%* %F{14}%~%f%f %B%F{141}λ%f%b "
 
 HISTSIZE=100
 SAVEHIST=100
 HISTFILE=~/.zsh_history
 
+export PATH="$LOCAL_BIN:$DOCKER_BIN:$GO_BIN:$PATH"
 export CLICOLOR=1
-export PATH="$LB:$PATH"
-export EDITOR="$NVIM_PATH"
-export VISUAL="$NVIM_PATH"
 export LSCOLORS=GxFxCxDxBxegedabagacad
 
 autoload -Uz compinit
@@ -24,8 +23,6 @@ zstyle ':completion:*' menu select
 
 alias cls="clear"
 alias sozsh="source $HOME/.zshrc"
-alias zshrc="$LB/nvim $HOME/.zshrc"
-alias nvim-conf="cd $HOME/.config/nvim && $LB/nvim ."
 
 alias g='git'
 alias gs='git status'
@@ -35,8 +32,3 @@ alias gp='git push'
 
 alias ll="ls -AFlh"
 alias l="ls -CF"
-
-for cmd in n vim nvim; do
-  alias "$cmd=$NVIM_PATH"
-done
-
