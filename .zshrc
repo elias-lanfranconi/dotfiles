@@ -1,13 +1,12 @@
 LOCAL_BIN="$HOME/.local/bin"
 DOCKER_BIN="$HOME/.docker/bin"
-GO_BIN="$HOME/go/bin"
-PROMPT="%F{250}%* %F{14}%~%f%f %B%F{141}λ%f%b "
+PROMPT="%F{250}%* %F{14}%~%f%f %B%F{141}=>%f%b "
 
 HISTSIZE=100
 SAVEHIST=100
 HISTFILE=~/.zsh_history
 
-export PATH="$LOCAL_BIN:$DOCKER_BIN:$GO_BIN:$PATH"
+export PATH="$LOCAL_BIN:$DOCKER_BIN:$PATH"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagacad
 
