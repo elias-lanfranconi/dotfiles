@@ -45,10 +45,8 @@ require("lualine").setup({
 
 require("nvim-treesitter").install({
 		"c",
-		"hcl",
 		"sql",
 		"lua",
-		"yaml",
 		"json",
 		"python",
 		"javascript",
@@ -57,7 +55,7 @@ require("nvim-treesitter").install({
 
 require("telescope")
 
-vim.lsp.enable("ty")
-vim.lsp.enable("ruff")
+vim.lsp.enable("clangd")
+
 vim.cmd.colorscheme("tokyonight")
 
